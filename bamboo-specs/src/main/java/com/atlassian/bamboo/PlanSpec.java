@@ -12,6 +12,8 @@ import com.atlassian.bamboo.specs.builders.notification.CommittersRecipient;
 import com.atlassian.bamboo.specs.builders.notification.EmailRecipient;
 import com.atlassian.bamboo.specs.builders.notification.PlanFailedNotification;
 import com.atlassian.bamboo.specs.builders.repository.git.GitRepository;
+import com.atlassian.bamboo.specs.builders.repository.git.UserPasswordAuthentication;
+import com.atlassian.bamboo.specs.builders.repository.github.GitHubRepository;
 import com.atlassian.bamboo.specs.builders.task.DumpVariablesTask;
 import com.atlassian.bamboo.specs.builders.trigger.ScheduledTrigger;
 import com.atlassian.bamboo.specs.util.BambooServer;
@@ -30,6 +32,8 @@ public class PlanSpec {
                 "hbk specs test number " + planIndex,
                 new BambooKey("HST" + planIndex))
                 .linkedRepositories("github java specs")
+                .planRepositories(new GitHubRepository().authentication(new UserPasswordAuthentication("mgardias").password("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"))
+                        .name("test4Bamboo").repository("mgardias/test4Bamboo"))
                 .planBranchManagement(new PlanBranchManagement().createManually().triggerBuildsManually())
                 .notifications(new Notification().type(new PlanFailedNotification()).recipients(new EmailRecipient("bamboo@examp3l2e2.com")))
                 .stages(createStage())
