@@ -44,7 +44,7 @@ public class PlanSpec {
 
     private static Stage createStage() {
         final Stage stage = new Stage("Default Stage");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             stage.jobs(new Job("Default Job" + i,
                     new BambooKey("JOB" + i))
                     .tasks(new DumpVariablesTask()));
