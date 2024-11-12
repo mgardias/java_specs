@@ -34,7 +34,7 @@ public class PlanSpec {
                 "hbk specs test number " + planIndex,
                 new BambooKey("HST" + planIndex))
                 .linkedRepositories("github java specs")
-                .planRepositories(new GitHubRepository().authentication(new UserPasswordAuthentication("mgardias").password("BAMSCRT@0@0@cPhmjQcGPO4RI2Ch0noqzSp8s6+wGW/L32BYpyKTn8d3bCIFstgOHddBz8UOkpymw3Rbv5GpVenHA3kUsNTHNaE1AQS4LuPW6ChVP8EqnHsoIUS6+4R30vKwlhAWjHfd"))
+                .planRepositories(new GitHubRepository().webhookEnabled(true).authentication(new UserPasswordAuthentication("mgardias").password("BAMSCRT@0@0@cPhmjQcGPO4RI2Ch0noqzSp8s6+wGW/L32BYpyKTn8d3bCIFstgOHddBz8UOkpymw3Rbv5GpVenHA3kUsNTHNaE1AQS4LuPW6ChVP8EqnHsoIUS6+4R30vKwlhAWjHfd"))
                         .name("test4Bamboo").repository("mgardias/test4Bamboo").repositoryViewer(new GitHubRepositoryViewer()))
                 .planBranchManagement(new PlanBranchManagement().createForPullRequest())
                 .triggers(new GitHubTrigger())
