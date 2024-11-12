@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.atlassian.bamboo</groupId>
     <artifactId>bamboo-specs-parent</artifactId>
-    <version>9.2.8</version>
+    <version>10.1.0-m03</version>
     <relativePath/>
   </parent>
 
@@ -16,12 +16,12 @@
     <dependency>
       <groupId>com.atlassian.bamboo</groupId>
       <artifactId>bamboo-specs-api</artifactId>
-      <version>9.2.8</version>
+      <version>10.1.0-m03</version>
     </dependency>
     <dependency>
       <groupId>com.atlassian.bamboo</groupId>
       <artifactId>bamboo-specs</artifactId>
-      <version>9.2.8</version>
+      <version>10.1.0-m03</version>
     </dependency>
 
     <!-- Tests dependencies -->
